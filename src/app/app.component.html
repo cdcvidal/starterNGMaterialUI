@@ -1,5 +1,19 @@
 <h1>
   {{title}}
 </h1>
-<a routerLink="/pois">Heroes</a>
-  <router-outlet></router-outlet>
+
+
+<md-toolbar>
+  <span>First Row</span>
+
+  <md-toolbar-row>
+    <span>
+      <a routerLink="/pois">Pois</a>
+    </span>
+  </md-toolbar-row>
+
+  <md-toolbar-row>
+    <span>Third Row</span>
+  </md-toolbar-row>
+</md-toolbar>
+<router-outlet></router-outlet>

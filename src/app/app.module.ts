@@ -5,30 +5,27 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
+import { PoisComponent } from './pois/pois.component';
+
+import { AppRoutingModule }     from './app-routing.module';
 
 import 'hammerjs';
 
 import { APP_CONFIG, AppConfig } from '../shared/app.config';
 
 import { AppComponent } from './app.component';
-import { PoisComponent } from './pois/pois.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PoisComponent,
+    PoisComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    RouterModule.forRoot([
-      {
-        path: 'pois',
-        component: PoisComponent
-      }
-    ])
+    AppRoutingModule
   ],
   providers: [
     { provide: APP_CONFIG, useValue: AppConfig }
